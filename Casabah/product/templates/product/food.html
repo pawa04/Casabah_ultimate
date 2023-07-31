@@ -5,7 +5,16 @@
     <title></title>
 </head>
 <body>
-<h1> This is the product number </h1>
-<h2> you are at {{ form }} page </h2>
+{% extends "home.html"%}
+{% block content%}
+
+<h1> This is the product {{ pasteles.id  }}</h1>
+<h2> you are at {{ pasteles }} page </h2>
+<p> {{ pasteles.description  }}</p>
+<p> precio {{ pasteles.price  }} €</p>
+
+{% endblock %}
+
 </body>
+
 </html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello world</title>
+</head>
+<body>
+<h3> <a href="{% url 'home-page'%}">Casabah pasteleria tradicional </a> </h3>
+<h1> mis productos son :</h1>
+<br>
+<ul>
+    {%for pastel in pasteles %}
+
+    <li> {{ pastel.name  }}
+        <a href="{% url 'product-page' pk=pastel.id%}"> view</a>
+          <a href="{% url 'update-page' pk=pastel.id%}">edit</a>
+         <a href="{% url 'delete-page' pk=pastel.id%}">delete</a>
+    <a>delete</a></li>
+     {{ pastel.description  }}
+
+    {% endfor %}
+</ul>
+</body>
+</html>
