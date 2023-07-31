@@ -20,7 +20,7 @@ class Pastry(models.Model):
 
 class Ingredients(models.Model) :
 
-    name= models.CharField(max_length=50,unique=True)
+    name= models.CharField(max_length=50)
     def __str__(self):
         # How to return different values
         return self.name
