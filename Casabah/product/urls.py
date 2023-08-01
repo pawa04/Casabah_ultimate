@@ -14,6 +14,6 @@ urlpatterns = [path("", views.index, name="home-page"),
                ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 #hello
-urlpatterns += [re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT, }), ]
+
 
 
